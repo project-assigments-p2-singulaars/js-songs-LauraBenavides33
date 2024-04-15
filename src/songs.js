@@ -1,23 +1,31 @@
 //Exercise 1: Get the array of all Artists.
-function getAllArtists(array){
-    let result = '???';
-    //console.log("Exercise 1 ->", result);
+
+function getAllArtists(songs){   
+    const result= songs.map(song => song.artist);
+    console.log(result);
     return result;
+    
 };
 
 //Exercise 2: Get the songs of a certain artist
-function getSongsFromArtist(array, artist){
-    //Write your code here
+function getSongsFromArtist(songs){
+    const result2 = (artistName) => songs.filter(song => song.artist === artistName);
+    console.log(result2);
+    return result2;
 };
 
 //Exercise 3: Alphabetic order by title
 function orderAlphabetically(){
-    //Write your code here
+    const result3 = () => songs.sort((a, b) => a.title.localeCompare(b.title));
+    console.log(result3);
+    return result3;
 };
 
 //Exercise 4: Order by year, ascending
 function orderByYear(){
-    //Write your code here
+    const result4 = () => songs.sort((a, b) => a.year - b.year);
+    console.log(result4);
+    return result4;
 };
 
 //Exercise 5: Filter songs by genre
